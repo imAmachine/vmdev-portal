@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #000000;
+    color: #F5F5F5;
+    height: 100%;
+}
+
+html {
+    height: 100vh;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 70px;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+header {
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.hdft__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    min-width: 1106px;
+    max-width: 1106px;
+    height: 100%;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 1121px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+.menu__wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Open Sans';
+    flex-grow: 6;
+}
+
+.menu__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px;
+    width: fit-content;
+    border: solid 2px white;
+    padding: 10px 50px;
+    border-radius: 20px;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.lt {
+    margin: 0;
+    padding: 0;
+    animation: kek 1s infinite linear;
+}
+
+.small-gear {
+    position: relative;
+    width: auto;
+    justify-self: center;
+    height: 100%;
+    margin-right: 10px;
+    animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes kek {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
