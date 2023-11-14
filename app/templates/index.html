@@ -2,21 +2,12 @@
 
 {% block title %}VM DEVELOPER{% endblock %}
 
-{% block header %}
-        <div id="logo">
-            <img src="{{ url_for('static', filename='img/big-gear.svg') }}" class="gear small-gear"></img>
-            <span class="title">VMDEV.RU<span class="lt">_</span></span>
-        </div>
-{% endblock %}
+{% block header %}не для тебя ягодку выращивал{% endblock %}
 
 {% block main %}
-    <div class="wrapper">
-        <div class="menu__wrapper">
-            <div class="menu__form">
-                
-            </div>
-        </div>
-    </div>
+    {% if current_user.is_authenticated %}
+        <h1>Authorized {{ current_user.login }}</h1>
+    {% endif %}
 {% endblock %}
 
 {% block footer %}

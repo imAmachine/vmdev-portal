@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}VM DEVELOPER{% endblock %}
+
+{% block header %}не для тебя ягодку выращивал{% endblock %}
+
+{% block main %}
+    <div class="wrapper">
+        <div class="menu__wrapper">
+            <div class="menu__form">
+                <form action="login" method="POST" class="loginForm__wrapper__registration">
+                    {{ logform.csrf_token }}
+                    {{ logform.login }}
+                    {{ logform.password }}
+                    <div class="button_wrapper">
+                        <input type="submit" class="loginForm__wrapper__submit" value="Войти">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
