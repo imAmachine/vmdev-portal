@@ -1,8 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-sizing: border-box;
+    font-family: 'Open Sans';
 }
 
 body {
@@ -29,16 +30,14 @@ header, footer {
 }
 
 .loginForm__wrapper__input {
-    border-radius: 5px;
     width: 100%;
-    padding: 10px 14px;
-    color: #000;
-    position: relative;
-    margin-top: 26px;
+    padding: 5px 10px;
+    color: #fff;
     border: none;
     display: block;
     outline: none;
-    padding-right: 45px;
+    border-bottom: 1px solid #fff;
+    background: none;
 }
 
 .button {
@@ -88,9 +87,6 @@ header {
     flex: 1 0 auto;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 1121px;
 }
 
 footer {
@@ -98,26 +94,15 @@ footer {
     bottom: 0;
 }
 
-.menu__wrapper {
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-    font-family: 'Open Sans';
-    flex-grow: 6;
-}
-
 .menu__form {
+    /* border: solid 2px white; */
+    padding: 30px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 550px;
-    width: fit-content;
-    border: solid 2px white;
-    padding: 10px 50px;
-    border-radius: 20px;
+    gap: 25px;
+    width: 250px;
+    box-shadow: 0px 0px 10px #aaa;
 }
 
 .title {
@@ -162,4 +147,13 @@ footer {
     100%{
         opacity: 1;
     }
+}
+
+.loginForm__wrapper__submit {
+    color: #fff;
+    margin-top: 20px;
+    height: 30px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 3px;
 }

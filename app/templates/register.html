@@ -6,21 +6,17 @@
 
 {% block main %}
     <div class="wrapper">
-        <div class="menu__wrapper">
-            <div class="menu__form">
-                <form method="POST" action="registration" class="loginForm__wrapper__registration">
-                    {{ regform.csrf_token }}
-                    {{ regform.login }}
-                    {{ regform.password }}
-                    {{ regform.name }}
-                    {{ regform.surname }}
-                    {{ regform.email }}
-                    <div class="button_wrapper">
-                        <input type="submit" class="loginForm__wrapper__submit" value="Зарегистрироваться">
-                    </div>
-                </form>
-            </div>
-        </div>
+        <form method="POST" action="registration" class="menu__form">
+            {{ regform.csrf_token }}
+            {{ regform.login }}
+            {{ regform.password }}
+            {{ regform.name }}
+            {{ regform.surname }}
+            {{ regform.email }}
+            <!-- <input type="submit" class="loginForm__wrapper__submit" value="Зарегистрироваться"> -->
+            <button type="submit" class="loginForm__wrapper__submit">Зарегистрироваться</button>
+            <button class="loginForm__wrapper__submit">Войти</button>
+        </form>
     </div>
 {% endblock %}
 
