@@ -20,13 +20,6 @@ def index():
     return render_template('index.html', login_form=login_form)
 
 
-@main_bp.route('/users')
-@login_required
-def get_users():
-    users = User.query.all()
-    return render_template('users.html', users=users)
-
-
 @main_bp.route('/registration', methods=['GET', 'POST'])
 def registration():
     if current_user.is_authenticated:
@@ -39,18 +32,21 @@ def registration():
             # Получение данных формы
             login = request.form.get('login')
             password = request.form.get('password')
+            name = request.form.get('name')
+            surname = request.form.get('surname')
             email = request.form.get('email')
 
             # Генерация хэша для пароля
             hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
 
-            new_user = User(login=login, password_hash=hashed_password, email=email)
+            new_user = User(login=login, password_hash=hashed_password, email=email,
+                            name=name, surname=surname)
             db.session.add(new_user)
             db.session.commit()
 
             return 'User registered successfully!'
-        except Exception as e:
-            return f'Invalid registration {e}'
+        except Exception:
+            return f'Invalid registration'
 
 
 @main_bp.route('/login', methods=['GET', 'POST'])
