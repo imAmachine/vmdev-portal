@@ -41,6 +41,26 @@ header, footer {
     padding-right: 45px;
 }
 
+.button {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16pt;
+    border-radius: 10px;
+    padding: 5px;
+    border: solid 2px white;
+}
+
+.buttons__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 header {
     align-items: center;
 }

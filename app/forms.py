@@ -10,9 +10,15 @@ class LoginForm(FlaskForm):
     password = PasswordField('password', validators=[DataRequired(), Length(min=8)],
                              render_kw={"class": "loginForm__wrapper__input", "placeholder": "Пароль"})
 
+
 class RegistrationForm(FlaskForm):
     login = StringField('login', validators=[DataRequired()],
                         render_kw={"class": "loginForm__wrapper__input", "placeholder": "Логин"})
     password = PasswordField('password', validators=[DataRequired(), Length(min=8)],
                              render_kw={"class": "loginForm__wrapper__input", "placeholder": "Пароль"})
-    email = StringField('email', validators=[DataRequired(), Email()], render_kw={"class": "loginForm__wrapper__input", "placeholder": "Email"})
+    name = StringField('name', validators=[DataRequired()],
+                       render_kw={"class": "loginForm__wrapper__input", "placeholder": "Имя"})
+    surname = StringField('surname', validators=[DataRequired()],
+                          render_kw={"class": "loginForm__wrapper__input", "placeholder": "Фамилия"})
+    email = StringField('email', validators=[DataRequired(), Email()],
+                        render_kw={"class": "loginForm__wrapper__input", "placeholder": "Email"})

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}VM DEVELOPER{% endblock %}
+{% block title %}{% endblock %}
 
 {% block header %}не для тебя ягодку выращивал{% endblock %}
 
@@ -12,6 +12,8 @@
                     {{ regform.csrf_token }}
                     {{ regform.login }}
                     {{ regform.password }}
+                    {{ regform.name }}
+                    {{ regform.surname }}
                     {{ regform.email }}
                     <div class="button_wrapper">
                         <input type="submit" class="loginForm__wrapper__submit" value="Зарегистрироваться">

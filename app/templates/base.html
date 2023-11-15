@@ -8,16 +8,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block title %}VMDEV{% endblock %}</title>
     </head>
     <body>
         <header>
             <div class="hdft__wrapper">
                 <div id="logo">
-                    <img src="{{ url_for('static', filename='img/big-gear.svg') }}" class="gear small-gear"></img>
+                    <img src="{{ url_for('main.static', filename='img/big-gear.svg') }}" class="gear small-gear"></img>
                     <span class="title">VMDEV.RU<span class="lt">_</span></span>
                 </div>
                 {% block header %}{% endblock %}
+                <div class="buttons__wrapper">
+                    {% if not current_user.is_authenticated %}
+                        <a href="{{ url_for('main.login') }}" class="button">Логин</a>
+                        <a href="{{ url_for('main.registration') }}" class="button">Регистрация</a>
+                    {% else %}
+                        <a href="{{ url_for('main.logout') }}" class="button">Выйти</a>
+                    {% endif %}
+                </div>
             </div>
         </header>
         {% block main %}{% endblock %}

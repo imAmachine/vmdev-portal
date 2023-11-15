@@ -13,6 +13,7 @@ main_bp = Blueprint('main', __name__, static_folder='static', static_url_path='/
 def load_user(user_id):
     return LoginUser.get(user_id)
 
+
 @main_bp.route('/')
 def index():
     login_form = LoginForm()
